@@ -1,0 +1,19 @@
+@startuml contraseña
+generadorcontraseña --|> contraseña
+
+class contraseña{
+numeros : int
+longitud :  int
+minusculas : int
+mayusculas : int
+
+escoger()
+validacion()
+}
+
+class generadorcontraseña{
+contraseña : str
+generador()
+}
+
+@enduml
