@@ -1,6 +1,7 @@
 import random
 import string
 from VALID import ver
+import subprocess
 
 class Contraseña:
     def __init__(self, longitud : int,numeros :int, minusculas: str, mayusculas : str) :
@@ -21,11 +22,15 @@ class generarcontraseña(Contraseña):
             super().__init__(longitud, numeros, contraseña, minusculas, mayusculas)
             self.contraseña = ""
 
-        def generador(self):
+        def generador(self, esocger):
+            longitud = self.longitud
+            caracteres = string.ascii_letters + string.digits
             while True:
                 contraseña = (" ").join(random.choice(caracteres) for i in range(longitud))
-                for num in range(lMaxima):
-                password = password + chr(int(random.randint(32, 126))) 
+                if(sum(c.islower()for c in contraseña)) >= minusculas
+                    and sum (c.isupper() for c in contraseña) >= mayusculas
+                    and sum(c.isdigit() for c in contraseña) >= numeros:
+                    break
 
-            print('Clave Generada: ', contraseña)
+            print('La clave generada de acuerdo a sus indicaciones es ', contraseña)
 
