@@ -3,7 +3,11 @@ import random
 import string
 from VALID import ver
 
+""""
+El siguiente codigo lo utilice usando esta pagina https://justcodeit.io/creando-generador-de-contrasenas-con-python/ pero
+lo hice orientada a objetos 
 
+"""
 class Contraseña:
     def __init__(self, longitud : int,numeros :int, minusculas: int, mayusculas : int) :
         self.longitud = longitud
