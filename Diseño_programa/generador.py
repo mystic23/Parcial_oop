@@ -33,6 +33,5 @@ class generarcontraseña(Contraseña):
 
             print('La clave generada de acuerdo a sus indicaciones es ', contraseña)
 
-contraseña = generarcontraseña(8,5,1,2)
-contraseña.generador()
+
 
